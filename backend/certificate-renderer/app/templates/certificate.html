@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Income Certificate</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        padding: 40px;
+      }
+
+      .certificate {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #16324f;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 12px 0;
+      }
+
+      .footer {
+        margin-top: 30px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+
+        .certificate {
+          box-shadow: none;
+          border-radius: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="certificate">
+      <h1>FairGig Income Certificate</h1>
+
+      <p><strong>Worker Name:</strong> {{ data.worker_name }}</p>
+      <p><strong>Date Range:</strong> {{ data.date_range }}</p>
+      <p><strong>Total Verified Earnings:</strong> {{ data.verified_earnings }}</p>
+      <p><strong>Average Weekly Earnings:</strong> {{ data.average_weekly }}</p>
+
+      <div class="footer">
+        This certificate is generated from verified earning records submitted through FairGig.
+      </div>
+    </div>
+  </body>
+</html>
